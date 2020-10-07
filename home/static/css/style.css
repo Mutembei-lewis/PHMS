@@ -1,0 +1,8 @@
+.dismissible-container{
+    position: absolute;
+    width: 100vw;
+    height: 40px;
+    z-index: 1;
+    top: 6%;
+
+}

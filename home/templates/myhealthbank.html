@@ -1,0 +1,150 @@
+{% extends "base.html"%}
+{%block head%}
+{{super()}}
+{%endblock%}
+{% block content%}
+<div class="container">
+    <h1 class="h1 text-center"> Your Medical Data</h1>
+
+</div>
+<!-- Classic tabs -->
+<div class="classic-tabs mx-2 mt-4">
+
+    <ul class="nav tabs-chili-pepper nav-justified tabs-animated" id="myClassicTabOrange" role="tablist">
+        <div class="floor"></div>
+      <li class="nav-item">
+        <a class="nav-link  waves-light active show" id="profile-tab-classic-orange" data-toggle="tab" href="#profile-classic-orange"
+          role="tab" aria-controls="profile-classic-orange" aria-selected="true"><i class="fas fa-user fa-2x pb-2"
+            aria-hidden="true"></i><br>Personal Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" id="follow-tab-classic-orange" data-toggle="tab" href="#follow-classic-orange"
+          role="tab" aria-controls="follow-classic-orange" aria-selected="false"> <i class="fas fa-laptop-medical pb-2 fa-2x " aria-hidden="true"></i><br>General Health Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" id="contact-tab-classic-orange" data-toggle="tab" href="#contact-classic-orange"
+          role="tab" aria-controls="contact-classic-orange" aria-selected="false"> <i class="fas fa-capsules fa-2x pb-2" aria-hidden="true"></i><br>Pharmacy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" id="awesome-tab-classic-orange" data-toggle="tab" href="#awesome-classic-orange"
+          role="tab" aria-controls="awesome-classic-orange" aria-selected="false"> <i class="fas fa-hospital fa-2x pb-2" aria-hidden="true"></i><br>Care Provider</a>
+      </li>
+    </ul>
+  
+    <div class="tab-content  mb-4" id="myClassicTabContentOrange">
+      <div class="tab-pane w-50 m-auto fade active card  show" id="profile-classic-orange" role="tabpanel" aria-labelledby="profile-tab-classic-orange">
+        {%if personal_info is none%}
+        This information is yet to be Updated!! Go to Actions page
+        {%else%}
+        <ul class="list-group">
+          <li class="list-group-item active"> Basic Personal Information</li>
+          <li class="list-group-item"> <strong>Username:</strong> {{personal_info.username}}</li>
+          <li class="list-group-item"> <strong>Age:</strong>  {{personal_info.age}}</li>
+          <li class="list-group-item"> <strong>DOB:</strong>  {{personal_info.date_of_birth}}</li>
+          <li class="list-group-item"> <strong>Social security number:</strong>  {{personal_info.social_security_number}}</li>
+          <li class="list-group-item"> <strong>Emergency Contact:</strong> {{personal_info.emergeny_contact}}</li>
+          <li class="list-group-item"> <strong>Blood Group:</strong> {{personal_info.blood_group}}</li>
+          <li class="list-group-item"> <strong>Weight:</strong> {{personal_info.weight}}</li>
+          <li class="list-group-item"> <strong>Rhesus Factor</strong> {{personal_info.rhesus_factor}}</li>
+
+          <li class="list-group-item"><strong>Height:</strong> {{personal_info.height}}</li>
+
+
+        </ul>
+        {%endif%}
+          
+         
+
+
+      </div>
+      <div class="tab-pane fade  p-4" id="follow-classic-orange" role="tabpanel" aria-labelledby="follow-tab-classic-orange">
+        {%if health_history is none%} 
+        <p class="info-color"> This information needs to be added or updated to be visible</p>
+        {%else%}
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h3 class="h3-responsive"> HEALTH HISTORY</h3>
+              
+              <!-- Card -->
+                <div class="card">
+
+                
+                  <div class="card-body">
+
+                    <!-- Title -->
+                    <h4 class="card-title"><a>{{health_history.health_condition}}  </a></h4>
+                    <!-- Text -->
+                    <p class="card-text">{{health_history.condition_description}}</p>
+                    <!-- Button -->
+                    
+                    <a class="px-2 fa-lg li-ic"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                    <!-- Twitter -->
+                    <a class="px-2 fa-lg tw-ic"><i class="fas fa-trash-alt"></i></a>
+                    <!-- Dribbble -->
+                    <a class="px-2 fa-lg fb-ic"><i class="fas fa-share-alt"></i></a>
+                    <a class="px-2 fa-lg fb-ic"> <i class="fas fa-pen"></i></a>
+                  </div>
+
+                </div>
+              <!-- Card -->
+          
+
+            </div>
+            <div class="col-md-4">
+              <h3> ALLERGIES </h3>
+              {%if allergies is none%}
+              <p class=""> THis information has not yet been updated </p>
+              {%else%}
+               <!-- Card -->
+               <div class="card">
+
+                
+                <div class="card-body">
+
+                  <!-- Title -->
+                  <h4 class="card-title"><a>{{allergies.category}}  </a></h4>
+                  <!-- Text -->
+                  <p class="card-text">{{allergies.allergens}}</p>
+                  <!-- Button -->
+                  
+                  <a class="px-2 fa-lg li-ic"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                  <!-- Twitter -->
+                  <a class="px-2 fa-lg tw-ic"><i class="fas fa-trash-alt"></i></a>
+                  <!-- Dribbble -->
+                  <a class="px-2 fa-lg fb-ic"><i class="fas fa-share-alt"></i></a>
+                  <a class="px-2 fa-lg fb-ic"> <i class="fas fa-pen"></i></a>
+                </div>
+
+              </div>
+            <!-- Card -->
+              {%endif%}
+             
+            </div>
+            <div class="col-md-4">
+
+            </div>
+          </div>
+        </div>
+        {%endif%}
+       
+      </div>
+      <div class="tab-pane fade" id="contact-classic-orange" role="tabpanel" aria-labelledby="contact-tab-classic-orange">
+      THis pane is still active
+      </div>
+      <div class="tab-pane fade" id="awesome-classic-orange" role="tabpanel" aria-labelledby="awesome-tab-classic-orange">
+        <h4 class="h4 text-center"> TRACK MY HEALTH </h4>
+        <div class="card w-50  m-auto ">
+
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum vero expedita explicabo, repellat corrupti dicta voluptatem deleniti, porro quas iste doloremque illum molestias eveniet eaque optio deserunt dolores distinctio quam.
+
+
+
+        </div>
+      </div>
+      
+    </div>
+  
+</div>
+  <!-- Classic tabs -->
+{%endblock%}

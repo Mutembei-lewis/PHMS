@@ -1,0 +1,252 @@
+{% extends 'base.html'%}
+{%block head%}
+{{super()}}
+<title> Home page</title>
+<style>
+  @media screen and(min-width: 900px) {
+  .intro_paragraph{
+    font-family: 'Vollkorn', serif;
+    font-size: 3rem;
+    color: orange;
+    font-weight: 600;
+  }
+  
+}
+
+
+html,
+  body,
+  header,
+  .view {
+    height: 95%;
+  }
+
+
+
+  @media (max-width: 740px) {
+    html,
+    body,
+    header,
+    .view {
+      height: 1000px;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    html,
+    body,
+    header,
+    .view {
+      height: 600px;
+    }
+  }
+
+  .btn .fa {
+    margin-left: 3px;
+  }
+
+ 
+
+  .btn-white {
+    color: black !important;
+  }
+
+  h6 {
+    line-height: 1.7;
+  }
+
+  .rgba-gradient {
+    background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+    background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  }
+
+  .carousel-item {
+  height: 70vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+</style>
+{%endblock%}
+{% block content%}
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80')">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">First Slide</h3>
+          <p class="lead">This is a description for the first slide.</p>
+        </div>
+      </div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1448387473223-5c37445527e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">Second Slide</h3>
+          <p class="lead">This is a description for the second slide.</p>
+        </div>
+      </div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1485848395967-65dff62dc35b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')">
+        <div class="carousel-caption d-none d-md-block">
+          <h3 class="display-4">Third Slide</h3>
+          <p class="lead">This is a description for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+</header>
+<div class="container my-5 py-5 z-depth-1">
+ 
+ 
+  <!--Section: Content-->
+  <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+
+    <!--Grid row-->
+    <div class="row">
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4 mb-md-0">
+
+        <h3 class="font-weight-bold">About AfyaTrack</h3>
+
+        <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+          molestiae
+          numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam, doloremque laborum.</p>
+
+        <a class="btn btn-purple btn-md ml-0" href="#" role="button">Start now<i class="fa fa-gem ml-2"></i></a>
+
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-md-6 mb-4 mb-md-0">
+
+        <!--Image-->
+        <div class="view overlay z-depth-1-half">
+          <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" class="img-fluid"
+            alt="">
+          <a href="#">
+            <div class="mask rgba-white-light"></div>
+          </a>
+        </div>
+
+      </div>
+      <!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+
+  </section>
+  <!--Section: Content-->
+
+
+</div>
+
+<!-- 
+<div class="container pt-2 my-lg-1 z-depth-1">
+  <section class="p-md-3 mx-md-5">
+    <h2 class="font-weight-bold text-center mb-3">About AfyTrack</h2>
+    <div class="row">
+      <div class="col-lg-4" style="background-image: url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60); background-repeat: no-repeat; background-size: cover;">
+
+      </div>
+      <div class="col-lg-6">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus vitae delectus magnam, assumenda esse qui dolores reiciendis itaque eius officia debitis eveniet dolor nemo, facere, ipsam obcaecati sequi. Voluptatem, neque!
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur impedit corrupti non asperiores enim, veritatis voluptatem, aut nam ratione molestiae rem est blanditiis eum facere. Voluptas ducimus natus corporis facere!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cumque ratione, velit facere vitae necessitatibus nisi nulla iusto dolorem expedita explicabo illum perferendis harum sed laboriosam vel a, atque reiciendis?
+      </div>
+
+    </div>
+    
+    
+  </section>
+</div> -->
+
+
+<!-- Main navigation -->
+<div class="container my-5">
+
+  <!-- Section -->
+  <section>
+
+    <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">Services</h6>
+    <h3 class="font-weight-bold text-center dark-grey-text pb-2">Our Services</h3>
+    <hr class="w-header my-4">
+    <p class="lead text-center text-muted pt-2 mb-5">Join thousands of satisfied customers using AfyTrack today.
+      globally</p>
+
+    <div class="row">
+
+      <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card text-center bg-success text-white">
+          <div class="card-body">
+            <p class="mt-4 pt-2"> <i class="fas fa-3x fa-notes-medical"></i></p>
+            <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Track Health Service</a></h5>
+            <p class="mb-4">He polite be object change. Consider no overcame yourself sociable children.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card text-center">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fas fa-3x fa-clinic-medical"></i></p>
+            <h5 class="font-weight-normal my-4 py-2"><a class="dark-grey-text" href="#"> Health Care Provider Management</a></h5>
+            <p class="text-muted mb-4">He polite be object change. Consider no overcame yourself sociable children.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3 mb-4">
+        <div class="card text-center deep-purple lighten-1 text-white">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fas fa-3x fa-capsules"></i></p>
+            <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Medication Support System</a></h5>
+            <p class="mb-4">He polite be object change. Consider no overcame yourself sociable children.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xl-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <p class="mt-4 pt-2"><i class="fas fa-3x fa-database"></i></p>
+            <h5 class="font-weight-normal my-4 py-2"><a class="dark-grey-text" href="#">HDMS</a></h5>
+
+            <p class="text-muted mb-4">
+            <h6 class="h6">  Health Data Management Service</h6>  
+              He polite be object change. Consider no overcame yourself sociable children.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <!-- Section -->
+
+</div>
+{%endblock%}
+

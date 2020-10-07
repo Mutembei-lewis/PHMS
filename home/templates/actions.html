@@ -1,0 +1,480 @@
+{%extends 'base.html'%}
+{%block head %}
+{{super()}}
+<style>
+.rounded{
+  border-radius: 8px !important;
+  cursor: pointer;
+}
+.img-fluid{
+	width:100%;
+}
+.card-wrapper .card-rotating{
+	height: auto;
+}
+.face.back{
+  height: auto;
+}
+.grey-text {color:grey}
+.medical{
+  height: auto;
+  padding: 20px;
+}
+.view{
+  height: 60vh;
+}
+
+</style>
+{%endblock%}
+{%block content%}
+
+<!-- Main navigation -->
+<header>
+
+  <!-- Full Page Intro -->
+  <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/59.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-strong">
+      <!-- Content -->
+      <div class="container h-100">
+        <!--Grid row-->
+        <div class="row text-center align-items-center h-100">
+          <!--Grid column-->
+          <div class="col-lg-8 white-text mx-auto">
+            <h3 class="font-weight-bold mb-4 pb-2">This is the first step to living a healthier life !!</h3>
+            <p class="mb-4 pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam vitae, fuga similique quos aperiam tenetur quo ut rerum debitis.</p>
+          	<button type="button" class="btn btn-primary btn-rounded">Get started</button>
+          </div>
+          
+       
+          
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+  
+</header>
+<!-- Main navigation -->
+
+
+<!-- Classic tabs -->
+<div class="classic-tabs mx-2 mt-4">
+
+    <ul class="nav tabs-chili-pepper nav-justified tabs-animated" id="myClassicTabOrange" role="tablist">
+        <div class="floor"></div>
+      <li class="nav-item">
+        <a class="nav-link  waves-light active show" id="profile-tab-classic-orange" data-toggle="tab" href="#profile-classic-orange"
+          role="tab" aria-controls="profile-classic-orange" aria-selected="true"><i class="fas fa-user fa-2x pb-2"
+            aria-hidden="true"></i><br>Personal Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" id="follow-tab-classic-orange" data-toggle="tab" href="#follow-classic-orange"
+          role="tab" aria-controls="follow-classic-orange" aria-selected="false"> <i class="fas fa-laptop-medical pb-2 fa-2x " aria-hidden="true"></i><br>General Health Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" id="contact-tab-classic-orange" data-toggle="tab" href="#contact-classic-orange"
+          role="tab" aria-controls="contact-classic-orange" aria-selected="false"> <i class="fas fa-capsules fa-2x pb-2" aria-hidden="true"></i><br>Pharmacy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" id="awesome-tab-classic-orange" data-toggle="tab" href="#awesome-classic-orange"
+          role="tab" aria-controls="awesome-classic-orange" aria-selected="false"> <i class="fas fa-hospital fa-2x pb-2" aria-hidden="true"></i><br>Care Provider</a>
+      </li>
+    </ul>
+  
+    <div class="tab-content  mb-4" id="myClassicTabContentOrange">
+      <div class="tab-pane w-50 m-auto fade active card  show" id="profile-classic-orange" role="tabpanel" aria-labelledby="profile-tab-classic-orange">
+        
+          <h4 class="h3 red-text text-center"> Basic Info</h4>
+          <p class=""> 
+            This section allows you to add and modify your presonal Information <br>
+            To get started add your information and keep track of your personal data with us 
+            
+          </p>
+          
+         <p class="text-center">  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalRegisterForm"><i class="fas fa-plus"></i> Personal Info
+         </a></p>
+
+
+      </div>
+      <div class="tab-pane fade card p-4" id="follow-classic-orange" role="tabpanel" aria-labelledby="follow-tab-classic-orange">
+        <h3 class="text-center h3">BASIC HEALTH INFO</h3>
+        <p class="text-center"> This section will help you capture the most basic aspects of your health. The data is processed and availed to you in the MyHealthBank section of the page </p>
+       <!-- Container added -->
+       <div class="container my-5">
+
+        <!-- Section -->
+        <section>
+      
+        
+      
+          <div class="row">
+      
+            <div class="col-md-6 col-xl-3 mb-4">
+              <div class="card text-center bg-success text-white">
+                <div class="card-body">
+                  <p class="mt-4 pt-2">  <i class="fas fa-briefcase-medical fa-2x"></i>   </p>
+                  <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Health History</a></h5>
+                  <p class="mb-4">History is a crucial part of treatment for any patient. It could be a life changer, when it comes to early disease diagnosis.Add the info now!!</p>
+                  <p>
+                    <a href="" class=" " data-toggle="modal" data-target="#modalContactForm">
+                      <button type="button" class="btn btn-outline-info waves-effect">
+                        <i class="fas fa-plus-circle"></i>
+                      </button>
+                    </a>
+               
+                 </p>
+
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-6 col-xl-3 mb-4">
+              <div class="card text-center">
+                <div class="card-body">
+                  <p class="mt-4 pt-2"> <i class="fas fa-allergies fa-2x"></i></p>
+                  <h5 class="font-weight-normal my-4 py-2"><a class="dark-grey-text" href="#">Allergies</a></h5>
+                  <p class="text-muted mb-4">
+                    An allergy is an immune system response to a foreign substance that's not typically harmful to your body.  <br>
+                    <strong> Add info below</strong>
+                  </p>
+                  <p>
+                    <!--Cyan-->
+                    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalSubscriptionForm">
+                      <button type="button" class="btn btn-cyan"> <i class="fas fa-plus-circle"></i></button>
+
+                    </a>
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-6 col-xl-3 mb-4">
+              <div class="card text-center deep-purple lighten-1 text-white">
+                <div class="card-body">
+                  <p class="mt-4 pt-2"> <i class="fas fa-syringe fa-2x"></i></p>
+                  <h5 class="font-weight-normal my-4 py-2"><a class="text-white" href="#">Immunization</a></h5>
+                  <p class="mb-4">
+                    Immunization is a proven tool for controlling and eliminating life-threatening infectious diseases and is estimated to avert between 2 and 3 million deaths each year.
+                  </p>
+                  <p>
+                    <a href="" data-toggle="modal" data-target="#modalLoginForm">
+                      <button type="button" class="btn btn-outline-default waves-effect">
+                        <i class="fas fa-plus-circle"></i>
+                      </button>
+                    </a>
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-6 col-xl-3">
+              <div class="card text-center">
+                <div class="card-body">
+                  <p class="mt-4 pt-2"><i class="fas fa-vials fa-2x"></i></p>
+                  <h5 class="font-weight-normal my-4 py-2"><a class="dark-grey-text" href="#">Labs & Test Result</a></h5>
+                  <p class="text-muted mb-4">
+                    Clinical laboratory test results are a very important parameter in diagnosis, monitoring and screening. 70-80 % of decisions in diagnosis are based on laboratory results 
+                  </p>
+                  <p>
+                    <!--Unique-->
+                    <button type="button" class="btn btn-unique">
+                      <i class="fas fa-plus-circle"></i>
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+      
+        </section>
+        <!-- Section -->
+      
+      </div>
+       <!-- end of the container -->
+      </div>
+      <div class="tab-pane fade" id="contact-classic-orange" role="tabpanel" aria-labelledby="contact-tab-classic-orange">
+        <h1 class="h4 text-center"> MEDICAL ACTIVITIES </h1>
+        <div class="medical card w-50 m-auto">
+          This section allows you to  add medical rlated information ranging from prescriptions, medication list and allow you to set reminders for taking the drugs. 
+          <a href="" data-toggle="modal" data-target="#elegantModalForm">
+            <button type="button" class="btn btn-lg btn-deep-orange">Add prescription Reminder</button>
+
+          </a>
+          
+          <button type="button" class="btn btn-amber">Add drug medication  list</button>
+          
+          <button type="button" class="btn btn-unique"> Add prescription history</button>
+
+
+
+
+
+         
+        </div>
+      </div>
+      <div class="tab-pane fade" id="awesome-classic-orange" role="tabpanel" aria-labelledby="awesome-tab-classic-orange">
+        <h4 class="h4 text-center"> TRACK MY HEALTH </h4>
+        <div class="card w-50  m-auto ">
+
+          <button type="button" class="btn btn-success">Add Appointment</button>
+          <button type="button" class="btn btn-success">Add health providers</button>
+          <button type="button" class="btn btn-success">Add clinical details</button>
+
+
+
+        </div>
+      </div>
+      
+    </div>
+  
+</div>
+  <!-- Classic tabs -->
+
+
+
+
+
+                        <!-- start of the modal -->
+                        <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header text-center">
+                                <h4 class="modal-title w-100 font-weight-bold">Personal Info</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body mx-3">
+                                <form method="POST" role="form" action="{{url_for('actions')}}">
+                                    <div class="md-form mb-5">
+                                      
+                                      <input type="number" id="orangeForm-name"  name="age" class="form-control validate">
+                                      <label data-error="wrong" data-success="right" for="orangeForm-name">Age</label>
+                                    </div>
+                                    <div class="md-form mb-5">
+                                      
+                                      <input type="date" id="orangeForm-email" name="date_of_birth" class="form-control validate">
+                                      <label data-error="wrong" data-success="right" for="orangeForm-email">Date of Birth</label>
+                                    </div>
+                                    <div class="md-form mb-4">
+                                      
+                                      <input type="text" id="orangeForm-pass" name="insurer" class="form-control validate">
+                                      <label data-error="wrong" data-success="right" for="orangeForm-pass">Insurance Provider</label>
+                                    </div>
+                                    <div class="md-form mb-4">
+                                      
+                                      <input type="number" name="social_security_number" class="form-control validate">
+                                      <label data-error="wrong" data-success="right" for="orangeForm-pass">Social Security No</label>
+                                    </div>
+                                    <div class="md-form mb-4">
+                                    
+                                      <input type="tel" name="emrgency_contact" class="form-control validate">
+                                      <label data-error="wrong"  data-success="right" for="orangeForm-pass">Emergency Contact</label>
+                                    </div>
+          
+                                    <div class="md-form mb-4">
+                                      
+                                      <input type="text" name="blood_group"  class="form-control validate">
+                                      <label data-error="wrong" data-success="right" for="orangeForm-pass">Blood Group</label>
+                                    </div>
+          
+                                    <div class="md-form mb-4">
+                                  
+                                      <input type="text" name="rhesus_factor" class="form-control validate" placeholder="positive or negative">
+                                      <label data-error="wrong" data-success="right" for="orangeForm-pass">Rhesus Factor</label>
+                                    </div>
+                                    <div class="md-form mb-4">
+                                    
+                                      <input type="number" name="height" class="form-control validate">
+                                      <label data-error="wrong" data-success="right" for="orangeForm-pass">Height(feet)</label>
+                                    </div>
+                                    <div class="md-form mb-4">
+                                    
+                                      <input type="number" name="weight" class="form-control validate">
+                                      <label data-error="wrong" data-success="right" for="orangeForm-pass">Weight(Kgs)</label>
+                                    </div>
+                                
+                                  <div class="modal-footer d-flex justify-content-center">
+                                    <button name="submit" value="Submit"  type="submit" class="btn btn-deep-orange">Submit</button>
+                                  </div>
+                                </form>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <!-- end of modal -->
+
+                        <!-- second modal that captures user medical History -->
+                        <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header text-center">
+                              <h4 class="modal-title w-100 font-weight-bold">Add  health history </h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <form action="actions" method="POST" role="form">
+                              
+                            <div class="modal-body mx-3">
+                              
+                              <div class="md-form mb-5">
+                              
+                                <input type="text" value="" id="form34" name="health_condition" class="form-control validate" >
+                                <label data-error="wrong" data-success="right" for="form34">Condition Type</label>
+                              </div>
+
+                              
+                              
+
+                              <div class="md-form">
+                                <i class="fas fa-pencil prefix grey-text"></i>
+                                <textarea type="text" id="form8" name="history_description" class="md-textarea form-control"  rows="5"></textarea>
+                                <label data-error="wrong" data-success="right" for="form8">History description</label>
+                              </div>
+
+                            </div>
+                            <div class="modal-footer d-flex justify-content-center">
+                              <button class="btn btn-unique" name="submit" value="Send" type="submit">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+                            </div>
+                          </form>
+                          </div>
+                        </div>
+                      </div>
+
+
+                        <!-- end of thi section  -->
+
+                        <!-- START OF THE THIRD MODAL -->
+                        <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header text-center">
+                              <h4 class="modal-title w-100 font-weight-bold">Add  allergy</h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <form method="POST" action="actions">
+                                <div class="modal-body mx-3">
+                                  <div class="md-form mb-5">
+                                    <i class="fas fa-user prefix grey-text"></i>
+                                    <input type="text" id="form3" name="allergy_classification" class="form-control validate">
+                                    <label data-error="wrong" data-success="right" for="form3">Category</label>
+                                  </div>
+                          
+                                  <div class="md-form mb-4">
+                                    <i class="fas fa-envelope prefix grey-text"></i>
+                                    <input type="text" name="allergy_name" id="form2" class="form-control validate">
+                                    <label data-error="wrong" data-success="right" for="form2">Allergen</label>
+                                  </div>
+                          
+                                </div>
+                                <div class="modal-footer d-flex justify-content-center">
+                                  <button class="btn btn-indigo" name="submit" value="Add" type="submit">Add<i class="fas fa-paper-plane-o ml-1"></i></button>
+                                </div>
+                          </form>
+                          </div>
+                         
+                        </div>
+                      </div>
+                     
+                        <!-- END OF THE THIRD MODAL -->
+                        <!-- FINAL MODAL ON IMMUNIZATION -->
+                        <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="actions" method="POST" role="form"> 
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" name="vaccine" id="defaultForm-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-email">Vaccine name</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="datetime" name="vaccination_date" id="defaultForm-pass" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-pass">Vaccination date</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="submit" name="submit" value="Upload" class="btn btn-default">ADD</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+                        <!-- END OF MODAL  -->
+            <!-- PRESCRIPTION MODAL -->
+  <!-- Modal -->
+<div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <!--Content-->
+  <div class="modal-content form-elegant">
+    <!--Header-->
+    <div class="modal-header text-center">
+      <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Add Prescription</strong></h3>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <!--Body-->
+    <div class="modal-body mx-4">
+      <!--Body-->
+      <form action="actions" method="POST">
+      <div class="md-form mb-5">
+        <input type="text" id="Form-email1" name="med_name" class="form-control validate">
+        <label data-error="wrong" data-success="right" for="Form-email1">Medicine</label>
+      </div>
+      <div class="md-form mb-5">
+        <input type="text" name="dosage_interval" id="Form-email2" class="form-control validate">
+        <label data-error="wrong" data-success="right" for="Form-email1"> Dosage Interval</label>
+      </div>
+
+      <div class="md-form pb-3">
+        <input type="date" id="Form-pass1" name="prescription_date" class="form-control validate">
+        <label data-error="wrong" data-success="right" for="Form-pass1">Date Prescribed</label>
+       
+      </div>
+
+      <div class="text-center mb-3">
+        <button type="submit" name="submit" value="Prescription_day" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Submit</button>
+      </div>
+      
+      </form>
+    </div>
+    <!--Footer-->
+   
+  </div>
+  <!--/.Content-->
+</div>
+</div>
+<!-- Modal -->
+
+
+            <!-- END OF PRESCRIPTION MODAL -->
+
+
+{%endblock%}
+
+

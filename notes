@@ -1,0 +1,238 @@
+setting up virtualenv syntax 
+cd project-folder
+python3 -m venv ./venv
+
+
+{% extends "base.html" %}
+
+{%block head%}
+
+{{super()}}
+
+{%endblock%}
+
+{% block content %}
+
+<div class="container my-5 py-5 z-depth-1">
+
+
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+ 
+
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-md-6">
+
+          <!-- Default form login -->
+          <form class="text-center" action="{{url_for('login')}}">
+
+            <p class="h4 mb-4">Sign in</p>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+               <ul>
+                  {% for message in messages %}
+                  <li>{{ message }}</li>
+                  {% endfor %}
+               </ul>
+            {% endif %}
+         {% endwith %}
+
+            <!-- Email -->
+            <input type="email" name="email" id="defaultLoginFormEmail" autocomplete="off" class="form-control mb-4" placeholder="E-mail">
+            {{ form.email( class='form-control mb-4 is-invalid') }}
+
+            <!-- Password -->
+            <input type="password" name="password" id="defaultLoginFormPassword" autocomplete="off" class="form-control mb-4" placeholder="Password">
+
+            <div class="d-flex justify-content-around">
+              <div>
+                <!-- Remember me -->
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input"  id="defaultLoginFormRemember">
+
+                  <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+                </div>
+              </div>
+              <div>
+                <!-- Forgot password -->
+                <a href="">Forgot password?</a>
+              </div>
+            </div>
+
+            <!-- Sign in button -->
+            <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+            <!-- Register -->
+            <p>Not a member?
+              <a href="">Register</a>
+            </p>
+
+            <!-- Social login -->
+            <p>or sign in with:</p>
+
+                <a href="#" class="mx-1" role="button"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mx-1" role="button"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="mx-1" role="button"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="mx-1" role="button"><i class="fab fa-github"></i></a>
+
+          </form>
+          <!-- Default form login -->
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+
+    </section>
+    <!--Section: Content-->
+    </div>
+
+
+{% endblock %}
+
+
+
+
+{% extends "base.html" %}
+{%block head%}
+
+{%endblock%}
+{%block content%}
+
+<!-- Main navigation -->
+<div class="container-fluid mt-3 mb-5">
+  
+    <!-- Full Page Intro -->
+    <section style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/90.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+      <!-- Mask & flexbox options-->
+      <div class="mask d-flex justify-content-center align-items-center">
+        <!-- Content -->
+        <div class="container py-5 my-5">
+          
+          <h3 class="font-weight-bold text-center white-text pb-2">Get Started Free</h3>
+          <p class="lead text-center white-text pt-2 mb-5">Start to explore our product absolutely free.</p>
+          
+          <!--Grid row-->
+          <div class="row d-flex align-items-center justify-content-center">
+            <!--Grid column-->
+            <div class="col-md-6 col-xl-5">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                   <ul>
+                      {% for message in messages %}
+                      <li>{{ message }}</li>
+                      {% endfor %}
+                   </ul>
+                {% endif %}
+             {% endwith %}
+           
+              <form autocomplete="off" action="{{url_for('signup')}}" method="POST">
+              <div class="card">
+                <div class="card-body z-depth-2 px-4">
+                  <div class="md-form mt-3">
+                    <i class="fa fa-user prefix grey-text"></i>
+                    <input type="text" name="username" id="form3" class="form-control">
+                    <label for="form3">Your name</label>
+                  </div>
+                  <div class="md-form">
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                    <input type="email" name="email" id="form2" class="form-control">
+                    <label for="form2">Your email</label>
+                  </div>
+                  <div class="md-form">
+                    <i class="fas fa-key prefix grey-text"></i>
+                    <input type="password" name="password" id="form4" class="form-control">
+                    <label for="form4">Your password</label>
+                  </div>
+                  <div class="md-form">
+                    <i class="fas fa-key prefix grey-text"></i>
+                    <input type="password" name="confirm_password"  id="form4" class="form-control">
+                    <label for="form4">Confirm password</label>
+                  </div>
+                  <div class="text-center my-3">
+                    <button class="btn btn-indigo btn-block" type="submit">Send</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Content -->
+      </div>
+      <!-- Mask & flexbox options-->
+    </section>
+    <!-- Full Page Intro -->
+    
+  </div>
+  <!-- Main navigation -->
+
+
+{%endblock%}
+
+header Page
+
+
+  <!-- Full Page Intro-->
+  <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+      <!-- Content -->
+      <div class="container">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+            <p class="intro_paragraph text-center h1-responsive" >
+              {%if current_user.is_anonymous%}
+              Manage your health like a Pro!!
+            {%else%}
+            Welcome {{current_user.username.upper()}}
+            {%endif%}
+            </p>
+               
+          
+            
+            <h6 class="mb-4">
+              {%if current_user.is_authenticated%}
+
+              We are here to offer you only the best.
+               AfyTrack web application puts you right back at the centre of your health care.
+                Sign up today to get started
+                {%else %}
+                We are here to offer you only the best.
+               AfyTrack web application puts you right back at the centre of your health care.
+                Go to activity
+                {%endif%}
+
+            </h6>
+            <a class="btn btn-white btn-rounded" href="{{url_for('signup')}}">SIGN UP</a>
+            <a class="btn btn-outline-white btn-rounded">Learn more</a>
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+            <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
+    </div>
+    <!-- Mask & flexbox options-->
+  </div>
+  <!-- Full Page Intro -->
+
+  <!-- Main navigation -->
+ <header>
+  
+  
+</header>

@@ -1,0 +1,124 @@
+{% extends 'base.html'%}
+{%block head %}
+{{super()}}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+    .main-column{
+         
+          height: 90vh;
+          /* background: linear-gradient(to right,rgba(12, 1, 1, 0.224),rgba(24, 3, 3, 0.224) ), url(https://images.unsplash.com/photo-1559305255-9b8c67da6675?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60); */
+          background-repeat: no-repeat;
+          background: white;
+          background-size: cover;
+          background-position: center top;
+          background-attachment: fixed;
+          color:black;
+    }
+    .content-section h2{
+        font-family: 'Libre Baskerville', serif;
+        font-size: 30px;
+        font-weight: 700;
+        font-style: bold;
+
+    }
+    .search-page{
+        background-color: #e74c3c;
+        position: absolute;
+        top: 40%;
+        left: 10%;
+         /* -webkit-box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29); -->
+-moz-box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29);
+box-shadow: 21px 15px 5px 1px rgba(0,0,0,0.29); */
+-webkit-box-shadow: 7px 15px 65px 15px rgba(15, 6, 4, 0.86);
+-moz-box-shadow: 7px 15px 65px 15px rgba(14, 3, 2, 0.86);
+box-shadow: 7px 15px 30px 15px rgba(163, 147, 145, 0.86);
+        
+    }
+    .search-page h2{
+        color: white;
+    }
+  
+   .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    }
+</style>
+{%endblock%}
+{%block content%}
+<div>
+    <section>
+        
+            <div class="main-column m-0 ">
+                <div class="content-section w-50 h-50  p-lg-5 p-md-3 p-sm-2 m-auto">
+                    <h2 class="h4">Learn Medical Terms Here </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At perferendis facere incidunt tenetur cumque autem voluptate nihil nostrum, rerum quia blanditiis neque soluta sapiente et illo magnam veniam ea. Iure?
+                    </p>
+                </div>
+
+               
+                    <div class="d-flex  search-page w-75 m-auto h-25   justify-content-center ">
+                  
+                            <form class=" p-5">
+                                <div class="searchbar">
+                                    
+                                        <input class="search_input" type="text" name="" placeholder="Search...">
+                                <a href="#" class="search_icon" ><i class="fas fa-search"></i></a>
+                                   
+                                
+                                </div>
+                            </form>
+                   
+                       
+                       
+                    </div>
+                
+                   
+               
+         
+           
+
+        </div>
+    </section>
+</div>
+
+{%endblock%}
